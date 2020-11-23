@@ -38,17 +38,17 @@ module.exports = {
     async login(_, { username, password }) {
       const { errors, valid } = validateLoginInput(username, password);
       if (!valid) {
-        throw new UserInputError("Input error", errors);
+        throw new UserInputError("Input error", {errors});
       }
       const user = await User.findOne({ username });
       if (!user) {
         errors.general = "Username dosen't exist";
-        throw new UserInputError("User not found", errors);
+        throw new UserInputError("User not found", {errors});
       } else {
         const match = await bcrypt.compare(password, user.password);
         errors.general = "Wrong Password";
         if (!match) {
-          throw new UserInputError("Wrong Credentials", errors);
+          throw new UserInputError("Wrong Credentials", {errors});
         }
       }
       const refreshToken = generateToken(user, "refresh");
@@ -71,7 +71,9 @@ module.exports = {
         confirmPassword
       );
       if (!valid) {
-        throw new UserInputError("Errors", errors);
+        throw new UserInputError("Errors", {
+          errors
+        });
       }
       const user = await User.findOne({ username, email });
       if (user) {
@@ -93,7 +95,7 @@ module.exports = {
           return {
             ...res._doc,
             id: res._id,
-            token: generateToken(res, "access"),
+            accessToken: generateToken(res, "access"),
             refreshToken: generateToken(res, "refresh"),
           };
       }catch(errors){

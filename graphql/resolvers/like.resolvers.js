@@ -13,7 +13,6 @@ module.exports = {
             if(post){
                 if(post.likes.find(like => like.username === username)){
                     //unlike
-                    console.log('unlike')
                     post.likes = post.likes.filter(like => like.username!== username);
                 }else{
                     // like

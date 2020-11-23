@@ -16,7 +16,7 @@ module.exports = {
             try{
                 const post =await Post.findById(postId)
                 if(post){
-                    post.comments.unshift({
+                    post.comments.push({
                         username,
                         body,
                         createdAt:new Date()

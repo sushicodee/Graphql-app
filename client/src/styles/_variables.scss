@@ -1,0 +1,54 @@
+$primary-color:rgba(0, 0, 0, 0.89);
+$secondary-color:rgba(255, 255, 255, 0.897);
+$purple:rgb(170, 30, 170);
+$btn-grey:rgba(250, 0, 237, 0.575);
+$orange:#ff8100;
+$orangeh:#ff4000;
+$green:#329932;
+$greenh:#198c19;
+$red:#ff3232;
+$redh:#ff0000;
+$blue:rgb(0, 162, 255);
+$blueh:rgba(0, 110, 255, 0.87);
+$white:rgb(255, 255, 255);
+$abs-white:white;
+
+$transparent:transparent;
+
+$bg:rgba(255, 255, 255, 0.815);
+$grey:rgba(65, 65, 65, 0.733);
+
+$bg-dark-mode:#181818;
+$grey-dark-mode:#292929;
+$bg-grey:#dfdfdf;
+$bg-accent:#48414d;
+
+$text-color:#dadce1;
+$text-color-h:#dddddd;
+
+
+
+$border:1px solid #474a4d;
+
+$border-radius:4px;
+$border-radiusx2:8px;
+$border-circle:50%;
+
+
+$speed:500ms;
+
+// header
+$header-height:64px;
+
+//sidebar
+$sidebar-width:250px;
+$options-size: 60px;
+
+
+$error-color:rgb(231, 17, 17);
+
+$font-weights:(
+    "regular":400,
+    "medium":500,
+    "bold":700
+);

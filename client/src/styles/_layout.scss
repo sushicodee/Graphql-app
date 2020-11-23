@@ -1,0 +1,39 @@
+
+.core-app-wrapper {
+    padding-top:$header-height;
+  
+    // height:calc(100vh - $header-height)
+}
+
+/* mobile */
+@media (min-width: 375px) {
+    .core-app-wrapper{
+        // width: 23.4375em;
+        margin: 0px 16px 0px 16px;
+    }
+}
+
+// tablet
+@media (min-width: 768px) {
+    .core-app-wrapper{
+        width: 43.75em;
+        margin: auto;
+        .card-wrapper{
+            button{
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+// desktop
+@media (min-width: 1024px) {
+    .core-app-wrapper{
+        width: 54.8169em;
+        .card-wrapper{
+            button{
+                font-size: .5em;
+            }
+        }
+    }
+}

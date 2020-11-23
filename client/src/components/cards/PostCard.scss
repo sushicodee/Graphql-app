@@ -1,0 +1,9 @@
+img{
+    width: 100%;
+}
+.post-card{
+    .comment-container{
+        display: grid !important;
+        grid-template-columns: 5fr 1fr;
+    }
+}

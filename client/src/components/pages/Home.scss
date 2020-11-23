@@ -1,0 +1,13 @@
+.container{
+    h2{
+        text-align: center;
+    }
+}
+
+.posts-container{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: minmax(500px);
+    grid-gap:20px;
+  
+}
